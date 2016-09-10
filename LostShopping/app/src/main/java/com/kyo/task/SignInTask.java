@@ -94,7 +94,7 @@ public class SignInTask extends AsyncTask<String, Void,CUSTOMER>{
             SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
             Date regisDate=sdf.parse(date);
             customer.setCUS_REGISTRATION_DATE(regisDate);
-            return  customer;
+            return customer;
         }
         catch (Exception ex)
         {

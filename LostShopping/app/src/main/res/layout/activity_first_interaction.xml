@@ -40,6 +40,7 @@
             android:layout_height="wrap_content"
             android:text="Create Account"
             android:id="@+id/btnCreateAccount"
+            android:onClick="handlingCreateAccount"
             android:layout_marginBottom="10dp" />
 
         <TextView

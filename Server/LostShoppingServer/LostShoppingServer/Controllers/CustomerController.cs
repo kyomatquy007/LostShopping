@@ -32,7 +32,7 @@ namespace LostShoppingServer.Controllers
         }
         // insert
         [HttpPost]
-        public bool InsertCustomer(string acc, string pass, string first_name, string last_name, string address, string city, string country, string phone, string email)
+        public bool InsertCustomer(string acc, string pass, string first_name, string last_name, string email)
         {
             try
             {
@@ -43,10 +43,10 @@ namespace LostShoppingServer.Controllers
                 cus.CUS_PASS = pass;
                 cus.CUS_FIRSTNAME = first_name;
                 cus.CUS_LASTNAME = last_name;
-                cus.CUS_ADDRESS = address;
-                cus.CUS_CITY = city;
-                cus.CUS_COUNTRY = country;
-                cus.CUS_PHONE = phone;
+                //cus.CUS_ADDRESS = address;
+                //cus.CUS_CITY = city;
+                //cus.CUS_COUNTRY = country;
+                //cus.CUS_PHONE = phone;
                 cus.CUS_EMAIL = email;
                 cus.CUS_REGISTRATION_DATE = DateTime.Now;
 
