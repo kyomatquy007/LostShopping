@@ -26,3 +26,31 @@ D:\Android App\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\Sys
 D:\Android App\LostShopping\Server\LostShoppingServer\LostShoppingServer\obj\Debug\LostShoppingServer.csprojResolveAssemblyReference.cache
 D:\Android App\LostShopping\Server\LostShoppingServer\LostShoppingServer\obj\Debug\LostShoppingServer.dll
 D:\Android App\LostShopping\Server\LostShoppingServer\LostShoppingServer\obj\Debug\LostShoppingServer.pdb
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\roslyn\csc.exe
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\roslyn\System.Collections.Immutable.dll
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\roslyn\System.Reflection.Metadata.dll
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\roslyn\vbc.exe
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\roslyn\VBCSCompiler.exe
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\roslyn\VBCSCompiler.exe.config
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\LostShoppingServer.dll.config
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\LostShoppingServer.dll
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\LostShoppingServer.pdb
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\Newtonsoft.Json.dll
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\System.Net.Http.Formatting.dll
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\System.Web.Http.dll
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\System.Web.Http.WebHost.dll
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\Newtonsoft.Json.xml
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\System.Net.Http.Formatting.xml
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\System.Web.Http.xml
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\bin\System.Web.Http.WebHost.xml
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\obj\Debug\LostShoppingServer.csprojResolveAssemblyReference.cache
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\obj\Debug\LostShoppingServer.dll
+E:\Github\LostShopping\Server\LostShoppingServer\LostShoppingServer\obj\Debug\LostShoppingServer.pdb
