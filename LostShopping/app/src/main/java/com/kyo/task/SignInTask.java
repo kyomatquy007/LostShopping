@@ -58,9 +58,14 @@ public class SignInTask extends AsyncTask<String, Void,CUSTOMER>{
         {
             String account=params[0];
             String password=params[1];
+            //URL("http://192.168.56.1/lostshopping/api/customer?account="+account+"&password="+password):
+            //192.168.56.1: Mobile IP Address
+            //lostshopping: Application pool
+            //api/customer : Controller
             URL url=new URL("http://192.168.56.1/lostshopping/api/customer?account="+account+"&password="+password); //not done yet
             HttpURLConnection connection= (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
+            //application/json: Json Format
             connection.setRequestProperty("Content-Type","application/json; charset=utf-8");
             InputStreamReader isr=new InputStreamReader(connection.getInputStream(),"UTF-8");
             BufferedReader br=new BufferedReader(isr);
@@ -86,7 +91,7 @@ public class SignInTask extends AsyncTask<String, Void,CUSTOMER>{
             customer.setCUS_PHONE(jsonObject.getString("CUS_PHONE"));
             //Get date object from JSon Object
             String date=jsonObject.getString("CUS_REGISTRATION_DATE");
-            SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
             Date regisDate=sdf.parse(date);
             customer.setCUS_REGISTRATION_DATE(regisDate);
             return  customer;
