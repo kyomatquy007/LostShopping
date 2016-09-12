@@ -36,7 +36,7 @@ namespace LostShoppingServer
     #endregion
 		
 		public CategoryDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["SHOPPINGConnectionString1"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["SHOPPINGConnectionString"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

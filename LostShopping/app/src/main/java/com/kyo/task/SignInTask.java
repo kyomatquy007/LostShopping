@@ -62,7 +62,7 @@ public class SignInTask extends AsyncTask<String, Void,CUSTOMER>{
             //192.168.56.1: Mobile IP Address
             //lostshopping: Application pool
             //api/customer : Controller
-            URL url=new URL("http://192.168.56.1/lostshopping/api/customer?account="+account+"&password="+password); //not done yet
+            URL url=new URL("http://192.168.56.1/lostshopping/api/customer?account="+account+"&password="+password);
             HttpURLConnection connection= (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             //application/json: Json Format

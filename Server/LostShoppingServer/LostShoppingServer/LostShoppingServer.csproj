@@ -95,6 +95,11 @@
       <LastGenOutput>Category.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Product.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Product.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -116,7 +121,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Category.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="CustomerManager.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -124,6 +131,11 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Product.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Product.dbml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\Admin.aspx.cs">
@@ -148,6 +160,11 @@
   <ItemGroup>
     <None Include="Category.dbml.layout">
       <DependentUpon>Category.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Product.dbml.layout">
+      <DependentUpon>Product.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <PropertyGroup>
