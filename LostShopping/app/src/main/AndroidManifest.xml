@@ -13,10 +13,10 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LogInActivity"
-            android:label="Sign In"></activity>
+            android:label="Sign In" />
         <activity
             android:name=".FirstInteractionActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -28,9 +28,8 @@
         </activity>
         <activity
             android:name=".CreateAccountActivity"
-            android:label="Create Account">
-
-        </activity>
+            android:label="Create Account"></activity>
+        <activity android:name=".ViDuAdapterActivity"></activity>
     </application>
 
 </manifest>
