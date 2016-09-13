@@ -31,7 +31,9 @@
         android:layout_height="wrap_content"
         android:text="SIGN IN"
         android:id="@+id/btnSignIn"
-        android:layout_gravity="center_horizontal" />
+        android:background="@drawable/round_button"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -41,7 +43,8 @@
         android:id="@+id/txtForgotPassword"
         android:layout_gravity="right"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="10dp"
+        android:textColor="#686666" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -70,15 +73,18 @@
         android:text="Don&apos;t have an account?"
         android:id="@+id/textView7"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:textColor="#686666" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create Account"
         android:id="@+id/btnCreateAccount"
+        android:background="@drawable/round_button"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="20dp"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -88,5 +94,6 @@
         android:id="@+id/textView8"
         android:textSize="18dp"
         android:textStyle="bold"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:textColor="#000000" />
 </LinearLayout>

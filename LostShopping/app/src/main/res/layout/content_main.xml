@@ -13,10 +13,96 @@
     tools:context="com.kyo.lostshopping.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontalScrollView2" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/llCategory">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chargers"
+                android:id="@+id/btnChargers" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gloves"
+                android:id="@+id/btnGloves" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shoes - Sandals"
+                android:id="@+id/btnShoes" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Backpack"
+                android:id="@+id/btnBackPack" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trekking"
+                android:id="@+id/btnTrekking" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Motorbike Accessories"
+                android:id="@+id/btnMotoAccess" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clothes"
+                android:id="@+id/btnClothes" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Headphones"
+                android:id="@+id/btnHeadphones" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cameras"
+                android:id="@+id/btnCameras" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Watches"
+                android:id="@+id/btnWatches" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drones"
+                android:id="@+id/btnDrones" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Speakers"
+                android:id="@+id/btnSpeakers" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
     <GridView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/gvProducts"
         android:layout_gravity="center_horizontal"
         android:numColumns="2" />
+
 </LinearLayout>

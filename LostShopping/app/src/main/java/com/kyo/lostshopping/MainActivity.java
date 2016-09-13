@@ -1,9 +1,6 @@
 package com.kyo.lostshopping;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -12,14 +9,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.GridView;
+import android.widget.LinearLayout;
+
+import com.kyo.model.CATEGORY;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    Button btnChargers, btnGloves, btnShoes, btnBackPack, btnTrekking, btnMotoAccess, btnClothes
+            ,btnHeadphones, btnCameras, btnWatches, btnDrones, btnSpeaker;
+    LinearLayout llCategory;
+    GridView gvProducts;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        addControls();
+        addEvents();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -40,6 +51,27 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    private void addEvents() {
+        
+    }
+
+    private void addControls() {
+        btnBackPack= (Button) findViewById(R.id.btnBackPack);
+        btnCameras= (Button) findViewById(R.id.btnCameras);
+        btnChargers= (Button) findViewById(R.id.btnChargers);
+        btnClothes= (Button) findViewById(R.id.btnClothes);
+        btnDrones= (Button) findViewById(R.id.btnDrones);
+        btnGloves= (Button) findViewById(R.id.btnGloves);
+        btnHeadphones= (Button) findViewById(R.id.btnHeadphones);
+        btnMotoAccess= (Button) findViewById(R.id.btnMotoAccess);
+        btnShoes= (Button) findViewById(R.id.btnShoes);
+        btnSpeaker= (Button) findViewById(R.id.btnSpeakers);
+        btnTrekking= (Button) findViewById(R.id.btnTrekking);
+        btnWatches= (Button) findViewById(R.id.btnWatches);
+        llCategory= (LinearLayout) findViewById(R.id.llCategory);
+        gvProducts= (GridView) findViewById(R.id.gvProducts);
     }
 
     @Override

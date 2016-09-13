@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
+import com.kyo.model.CATEGORY;
 import com.kyo.model.PRODUCT;
 
 /**
@@ -15,6 +16,7 @@ public class PRODUCTAdapter extends ArrayAdapter<PRODUCT> {
 
     Activity context;
     int resource;
+    CATEGORY category=new CATEGORY();
     public PRODUCTAdapter(Activity context, int resource) {
         super(context, resource);
         this.context=context;

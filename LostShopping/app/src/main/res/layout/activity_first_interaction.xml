@@ -8,6 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
+    android:background="@drawable/background"
     tools:context="com.kyo.lostshopping.FirstInteractionActivity"
     android:gravity="center">
 
@@ -16,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:background="#bfffffff"
         android:gravity="center">
 
         <TextView
@@ -24,7 +26,8 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Trekking"
             android:id="@+id/textView2"
-            android:textSize="36dp" />
+            android:textSize="36dp"
+            android:textColor="#04B404" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -33,13 +36,15 @@
             android:text="LostShopping"
             android:id="@+id/textView3"
             android:textSize="24dp"
-            android:layout_marginBottom="30dp" />
+            android:layout_marginBottom="30dp"
+            android:textColor="#04B404" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Create Account"
             android:id="@+id/btnCreateAccount"
+            android:background="@drawable/round_button"
             android:onClick="handlingCreateAccount"
             android:layout_marginBottom="10dp" />
 
@@ -49,13 +54,15 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Already have an account?"
             android:id="@+id/textView4"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="10dp"
+            android:textColor="#686666" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SIGN IN"
             android:id="@+id/btnSignIn"
+            android:background="@drawable/round_button"
             android:layout_marginBottom="20dp" />
 
         <TextView
@@ -66,6 +73,7 @@
             android:id="@+id/textView5"
             android:textSize="18dp"
             android:textStyle="bold"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="10dp"
+            android:textColor="#000000" />
     </LinearLayout>
 </LinearLayout>

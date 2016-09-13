@@ -57,7 +57,9 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create Accout"
+        android:text="Create Account"
         android:id="@+id/btnCreateAccount"
-        android:layout_gravity="center_horizontal" />
+        android:background="@drawable/round_button"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffffff" />
 </LinearLayout>

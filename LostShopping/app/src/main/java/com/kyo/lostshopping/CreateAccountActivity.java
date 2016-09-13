@@ -1,11 +1,15 @@
 package com.kyo.lostshopping;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.kyo.model.CUSTOMER;
 import com.kyo.task.CreateAccountTask;
@@ -36,13 +40,31 @@ public class CreateAccountActivity extends AppCompatActivity {
         CreateAccountTask createAccountTask=new CreateAccountTask(CreateAccountActivity.this);
         CUSTOMER cus=new CUSTOMER();
 
-        cus.setCUS_FIRSTNAME(txtFirstName.getText().toString());
-        cus.setCUS_LASTNAME(txtLastName.getText().toString());
-        cus.setCUS_ACCOUNT(txtAccount.getText().toString());
-        cus.setCUS_EMAIL(txtEmail.getText().toString());
-        cus.setCUS_PASS(txtPassword.getText().toString());
+        //Check if any field is null, alert prompt will display
+        //not done yet
+        if(txtFirstName==null || txtLastName==null || txtAccount==null || txtEmail==null || txtPassword==null)
+        {
+            AlertDialog.Builder alertDialog=new AlertDialog.Builder(CreateAccountActivity.this);
+            alertDialog.setTitle("Oops!");
+            alertDialog.setMessage("Please fill in all the fields");
+            alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    dialogInterface.cancel();
+                }
+            });
+            AlertDialog dialog=alertDialog.create();
+            dialog.show();
+        }
+        else {
+            cus.setCUS_FIRSTNAME(txtFirstName.getText().toString());
+            cus.setCUS_LASTNAME(txtLastName.getText().toString());
+            cus.setCUS_ACCOUNT(txtAccount.getText().toString());
+            cus.setCUS_EMAIL(txtEmail.getText().toString());
+            cus.setCUS_PASS(txtPassword.getText().toString());
 
-        createAccountTask.execute(cus);
+            createAccountTask.execute(cus);
+        }
 
     }
 

@@ -9,6 +9,13 @@ namespace LostShoppingServer.Controllers
 {
     public class CategoryController : ApiController
     {
+        //show all data
+        [HttpGet]
+        public List<CATEGORY> showAllCategory()
+        {
+            CategoryDataContext context = new CategoryDataContext();
+            return context.CATEGORies.ToList();
+        }
         //show data by ID
         [HttpGet]
         public CATEGORY getDataByID(int ID)
