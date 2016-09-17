@@ -1,5 +1,7 @@
 package com.kyo.model;
 
+import android.graphics.Bitmap;
+
 import java.io.Serializable;
 
 /**
@@ -14,6 +16,7 @@ public class PRODUCT implements Serializable {
     private float PRO_DISCOUNT_AVAILABLE;
     private float PRO_DISCOUNT_PERCENT;
     private int PRO_ID;
+    private String PRO_IMAGE;
     private float PRO_LENGTH;
     private String PRO_NAME;
     private float PRO_SALE_UNIT_PRICE;
@@ -23,6 +26,23 @@ public class PRODUCT implements Serializable {
     private float PRO_SUP_UNIT_PRICE;
     private float PRO_UNIT_WEIGHT;
     private float PRO_WIDTH;
+    private Bitmap BitMapOfImage;
+
+    public Bitmap getBitMapOfImage() {
+        return BitMapOfImage;
+    }
+
+    public void setBitMapOfImage(Bitmap bitMapOfImage) {
+        BitMapOfImage = bitMapOfImage;
+    }
+
+    public String getPRO_IMAGE() {
+        return PRO_IMAGE;
+    }
+
+    public void setPRO_IMAGE(String PRO_IMAGE) {
+        this.PRO_IMAGE = PRO_IMAGE;
+    }
 
     public String getPRO_COLOR() {
         return PRO_COLOR;

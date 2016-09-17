@@ -112,6 +112,8 @@ namespace LostShoppingServer
 		
 		private System.Nullable<int> _PRO_SUP_ID;
 		
+		private string _PRO_IMAGE;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -148,6 +150,8 @@ namespace LostShoppingServer
     partial void OnPRO_SUBCAT_IDChanged();
     partial void OnPRO_SUP_IDChanging(System.Nullable<int> value);
     partial void OnPRO_SUP_IDChanged();
+    partial void OnPRO_IMAGEChanging(string value);
+    partial void OnPRO_IMAGEChanged();
     #endregion
 		
 		public PRODUCT()
@@ -471,6 +475,26 @@ namespace LostShoppingServer
 					this._PRO_SUP_ID = value;
 					this.SendPropertyChanged("PRO_SUP_ID");
 					this.OnPRO_SUP_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PRO_IMAGE", DbType="NVarChar(MAX)")]
+		public string PRO_IMAGE
+		{
+			get
+			{
+				return this._PRO_IMAGE;
+			}
+			set
+			{
+				if ((this._PRO_IMAGE != value))
+				{
+					this.OnPRO_IMAGEChanging(value);
+					this.SendPropertyChanging();
+					this._PRO_IMAGE = value;
+					this.SendPropertyChanged("PRO_IMAGE");
+					this.OnPRO_IMAGEChanged();
 				}
 			}
 		}

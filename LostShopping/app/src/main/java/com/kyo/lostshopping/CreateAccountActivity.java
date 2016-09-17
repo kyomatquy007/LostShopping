@@ -42,7 +42,9 @@ public class CreateAccountActivity extends AppCompatActivity {
 
         //Check if any field is null, alert prompt will display
         //not done yet
-        if(txtFirstName==null || txtLastName==null || txtAccount==null || txtEmail==null || txtPassword==null)
+        if(txtFirstName.getText().toString().isEmpty() || txtLastName.getText().toString().isEmpty()
+                || txtAccount.getText().toString().isEmpty() || txtPassword.getText().toString().isEmpty()
+                || txtEmail.getText().toString().isEmpty())
         {
             AlertDialog.Builder alertDialog=new AlertDialog.Builder(CreateAccountActivity.this);
             alertDialog.setTitle("Oops!");

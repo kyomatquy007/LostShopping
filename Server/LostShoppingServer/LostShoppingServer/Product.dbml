@@ -18,6 +18,7 @@
       <Column Name="PRO_DISCOUNT_PERCENT" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="PRO_SUBCAT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="PRO_SUP_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PRO_IMAGE" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

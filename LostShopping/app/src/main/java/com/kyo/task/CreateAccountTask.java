@@ -34,7 +34,7 @@ public class CreateAccountTask extends AsyncTask<CUSTOMER,Void,Boolean> {
     protected void onPostExecute(Boolean b) {
         super.onPostExecute(b);
         String msg="Create failed";
-        if(b==true)
+        if(b)
         {
             msg="Create success";
             Intent intent=new Intent(this.context,LogInActivity.class);
