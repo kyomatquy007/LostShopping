@@ -13,14 +13,14 @@ namespace LostShoppingServer.Controllers
         [HttpGet]
         public List<SUBCATEGORY>showAllSubCategory()
         {
-            SubCategoryDataContext context = new SubCategoryDataContext();
+            DataClasses1DataContext context = new DataClasses1DataContext();
             return context.SUBCATEGORies.ToList();
         }
         //show subcategory by ID
         [HttpGet]
         public SUBCATEGORY getDataByID(int ID)
         {
-            SubCategoryDataContext context = new SubCategoryDataContext();
+            DataClasses1DataContext context = new DataClasses1DataContext();
             SUBCATEGORY subcat = context.SUBCATEGORies.FirstOrDefault(x => x.SUBCAT_ID == ID);
             return subcat;
         }

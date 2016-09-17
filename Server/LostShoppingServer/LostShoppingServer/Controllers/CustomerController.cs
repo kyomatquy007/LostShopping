@@ -17,7 +17,7 @@ namespace LostShoppingServer.Controllers
         [HttpGet]
         public List<CUSTOMER>ShowAllCustomer()
         {
-            CustomerManagerDataContext context = new CustomerManagerDataContext();
+            DataClasses1DataContext context = new DataClasses1DataContext();
             return context.CUSTOMERs.ToList();
         }
 
@@ -25,7 +25,7 @@ namespace LostShoppingServer.Controllers
         [HttpGet]
         public CUSTOMER LogIn(string account, string password)
         {
-            CustomerManagerDataContext context = new CustomerManagerDataContext();
+            DataClasses1DataContext context = new DataClasses1DataContext();
             CUSTOMER customer = context.CUSTOMERs
                 .FirstOrDefault(x => x.CUS_ACCOUNT == account && x.CUS_PASS == password);
             return customer;
@@ -36,7 +36,7 @@ namespace LostShoppingServer.Controllers
         {
             try
             {
-                CustomerManagerDataContext context = new CustomerManagerDataContext();
+                DataClasses1DataContext context = new DataClasses1DataContext();
                 CUSTOMER cus = new CUSTOMER();
 
                 cus.CUS_ACCOUNT = acc;
@@ -64,7 +64,7 @@ namespace LostShoppingServer.Controllers
         [HttpDelete]
         public bool DeleteCustomer(int id)
         {
-            CustomerManagerDataContext context = new CustomerManagerDataContext();
+            DataClasses1DataContext context = new DataClasses1DataContext();
             CUSTOMER cus = context.CUSTOMERs.FirstOrDefault(x => x.CUS_ID == id);
             if (cus != null)
             {
@@ -78,7 +78,7 @@ namespace LostShoppingServer.Controllers
         [HttpPost]
         public bool UpdateCustommer(string acc, string pass, string first_name, string last_name, string address, string city, string country, string phone, string email)
         {
-            CustomerManagerDataContext context = new CustomerManagerDataContext();
+            DataClasses1DataContext context = new DataClasses1DataContext();
             CUSTOMER cus = context.CUSTOMERs.Single(x => x.CUS_ACCOUNT == acc);
             if (cus != null)
             {

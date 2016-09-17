@@ -14,7 +14,7 @@ namespace LostShoppingServer.Controllers
         [HttpGet]
         public List<PRODUCT>showAllProduct()
         {
-            ProductDataContext context = new ProductDataContext();
+            DataClasses1DataContext context = new DataClasses1DataContext();
             return context.PRODUCTs.ToList();
         }
 
@@ -22,7 +22,7 @@ namespace LostShoppingServer.Controllers
         [HttpGet]
         public List<PRODUCT>getDataBySubcatID(int sub_cat_id)
         {
-            ProductDataContext context = new ProductDataContext();
+            DataClasses1DataContext context = new DataClasses1DataContext();
             var results = from x in context.PRODUCTs
                             .Where(x => x.PRO_SUBCAT_ID == sub_cat_id)
                             select x;
@@ -33,7 +33,7 @@ namespace LostShoppingServer.Controllers
         [HttpGet]
         public PRODUCT getProductDetail(int pro_id)
         {
-            ProductDataContext context = new ProductDataContext();
+            DataClasses1DataContext context = new DataClasses1DataContext();
             PRODUCT pro = context.PRODUCTs.FirstOrDefault(x => x.PRO_ID == pro_id);
             return pro;
         }

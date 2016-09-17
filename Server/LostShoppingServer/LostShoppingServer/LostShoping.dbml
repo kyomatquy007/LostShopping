@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SHOPPING" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=LONTON;Initial Catalog=SHOPPING;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SHOPPINGConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CATEGORY" Member="CATEGORies">
+    <Type Name="CATEGORY">
+      <Column Name="CAT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CAT_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CAT_DES" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="CATEGORY_SUBCATEGORY" Member="SUBCATEGORies" ThisKey="CAT_ID" OtherKey="SUBCAT_CAT_ID" Type="SUBCATEGORY" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SUPPIER" Member="SUPPIERs">
+    <Type Name="SUPPIER">
+      <Column Name="SUP_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SUP_COMPANY_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SUP_WEB_URL" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="SUP_ADDRESS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SUP_TELEPHONE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="SUP_EMAIL" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Association Name="SUPPIER_PRODUCT" Member="PRODUCTs" ThisKey="SUP_ID" OtherKey="PRO_SUP_ID" Type="PRODUCT" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CUSTOMER" Member="CUSTOMERs">
+    <Type Name="CUSTOMER">
+      <Column Name="CUS_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CUS_ACCOUNT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CUS_PASS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CUS_FIRSTNAME" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="CUS_LASTNAME" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="CUS_ADDRESS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUS_CITY" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="CUS_COUNTRY" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="CUS_PHONE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CUS_EMAIL" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CUS_REGISTRATION_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="CUSTOMER_ORDER" Member="ORDERs" ThisKey="CUS_ID" OtherKey="ORD_CUS_ID" Type="ORDER" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DELIVERY_SERVICE" Member="DELIVERY_SERVICEs">
+    <Type Name="DELIVERY_SERVICE">
+      <Column Name="SER_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SER_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SER_DES" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SER_PARCEL_WEIGHT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SER_MAXLENGTH" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SER_MAXWIDTH" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SER_MAXDEPTH" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SER_PRICE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SER_ESTIMATE_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="DELIVERY_SERVICE_ORDER" Member="ORDERs" ThisKey="SER_ID" OtherKey="ORD_SER_ID" Type="ORDER" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IMAGES" Member="IMAGEs">
+    <Type Name="IMAGE">
+      <Column Name="IMG_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IMG_ID_REF" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IMG_PACTH" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ORDER_DETAIL" Member="ORDER_DETAILs">
+    <Type Name="ORDER_DETAIL">
+      <Column Name="OD_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OD_ORD_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OD_PRO_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OD_PRO_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OD_PRO_UNIT_PRICE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="OD_PRO_AMOUNT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="ORDER_ORDER_DETAIL" Member="ORDER" ThisKey="OD_ORD_ID" OtherKey="ORD_ID" Type="ORDER" IsForeignKey="true" />
+      <Association Name="PRODUCT_ORDER_DETAIL" Member="PRODUCT" ThisKey="OD_PRO_ID" OtherKey="PRO_ID" Type="PRODUCT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ORDERS" Member="ORDERs">
+    <Type Name="ORDER">
+      <Column Name="ORD_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ORD_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ORD_PAID_STATUS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ORD_TOTAL_AMOUNT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ORD_SHIPPING_STATUS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ORD_TOTLA_PRICE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ORD_NOTE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ORD_SER_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ORD_CUS_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ORD_BILL_ADDRESS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ORD_BILL_CITY" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ORD_BILL_COUNTRY" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ORD_BILL_POSTCODE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="ORDER_ORDER_DETAIL" Member="ORDER_DETAILs" ThisKey="ORD_ID" OtherKey="OD_ORD_ID" Type="ORDER_DETAIL" />
+      <Association Name="CUSTOMER_ORDER" Member="CUSTOMER" ThisKey="ORD_CUS_ID" OtherKey="CUS_ID" Type="CUSTOMER" IsForeignKey="true" />
+      <Association Name="DELIVERY_SERVICE_ORDER" Member="DELIVERY_SERVICE" ThisKey="ORD_SER_ID" OtherKey="SER_ID" Type="DELIVERY_SERVICE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAYMENT" Member="PAYMENTs">
+    <Type Name="PAYMENT">
+      <Column Name="PAY_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PAY_TYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRODUCT" Member="PRODUCTs">
+    <Type Name="PRODUCT">
+      <Column Name="PRO_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PRO_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PRO_DES" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PRO_LENGTH" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRO_WIDTH" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRO_DEPTH" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRO_DIAMETER" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRO_UNIT_WEIGHT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRO_COLOR" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PRO_SUP_UNIT_PRICE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRO_SUP_QUANTITY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRO_SALE_UNIT_PRICE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRO_DISCOUNT_AVAILABLE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRO_DISCOUNT_PERCENT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRO_SUBCAT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PRO_SUP_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PRODUCT_ORDER_DETAIL" Member="ORDER_DETAILs" ThisKey="PRO_ID" OtherKey="OD_PRO_ID" Type="ORDER_DETAIL" />
+      <Association Name="SUPPIER_PRODUCT" Member="SUPPIER" ThisKey="PRO_SUP_ID" OtherKey="SUP_ID" Type="SUPPIER" IsForeignKey="true" />
+      <Association Name="SUBCATEGORY_PRODUCT" Member="SUBCATEGORY" ThisKey="PRO_SUBCAT_ID" OtherKey="SUBCAT_ID" Type="SUBCATEGORY" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SUBCATEGORY" Member="SUBCATEGORies">
+    <Type Name="SUBCATEGORY">
+      <Column Name="SUBCAT_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SUBCAT_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SUBCAT_DES" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SUBCAT_CAT_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="SUBCATEGORY_PRODUCT" Member="PRODUCTs" ThisKey="SUBCAT_ID" OtherKey="PRO_SUBCAT_ID" Type="PRODUCT" />
+      <Association Name="CATEGORY_SUBCATEGORY" Member="CATEGORY" ThisKey="SUBCAT_CAT_ID" OtherKey="CAT_ID" Type="CATEGORY" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
