@@ -7,6 +7,8 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,7 +28,8 @@ import java.net.URL;
 public class ProductDetailActivity extends AppCompatActivity {
 
     ImageView imgDetail;
-    TextView txtPriceDetail;
+    TextView txtPriceDetail, txtDescription, txtName, txtColor, txtShippingFee;
+    Button btnBuy;
     PRODUCT pro=new PRODUCT();
 
     @Override
@@ -38,20 +41,41 @@ public class ProductDetailActivity extends AppCompatActivity {
     }
 
     private void addEvents() {
+        btnBuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                handlingBuy();
+            }
+        });
+    }
 
+    private void handlingBuy() {
+        
     }
 
     private void addControls() {
         imgDetail= (ImageView) findViewById(R.id.imgDetail);
         txtPriceDetail= (TextView) findViewById(R.id.txtDetailPrice);
+        txtDescription= (TextView) findViewById(R.id.txtDescription);
+        txtName= (TextView) findViewById(R.id.txtName);
+        txtColor= (TextView) findViewById(R.id.txtColor);
+        txtShippingFee= (TextView) findViewById(R.id.txtShippingFee);
+        btnBuy= (Button) findViewById(R.id.btnBuy);
 
         Intent intent=getIntent();
         int pro_id=intent.getIntExtra("PRO_ID",0);
         String pro_image=intent.getStringExtra("PRO_IMAGE");
         float pro_sale_unit_price=intent.getFloatExtra("PRO_SALE_UNIT_PRICE",0);
+        String pro_des=intent.getStringExtra("PRO_DES");
+        String pro_name=intent.getStringExtra("PRO_NAME");
+        String pro_color=intent.getStringExtra("PRO_COLOR");
+        float pro_sup_unit_price=intent.getFloatExtra("PRO_SUP_UNIT_PRICE",0);
 
         txtPriceDetail.setText(pro_sale_unit_price+" VNĐ");
-
+        txtDescription.setText(pro_des);
+        txtName.setText(pro_name);
+        txtColor.setText(pro_color);
+        txtShippingFee.setText(pro_sup_unit_price+" VNĐ");
         //Crash when calling ProductDetailTask
         //ProductDetailTask detailTask=new ProductDetailTask(ProductDetailActivity.this);
         //detailTask.execute(pro_image);

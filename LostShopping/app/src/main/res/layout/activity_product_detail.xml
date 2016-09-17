@@ -17,25 +17,110 @@
             android:layout_height="385dp"
             android:id="@+id/imgDetail"
             android:adjustViewBounds="true"
-            android:scaleType="fitCenter"/>
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="30dp"/>
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Large Text"
-                android:id="@+id/txtDetailPrice" />
+                android:layout_marginBottom="30dp"
+                android:id="@+id/txtName"
+                android:textColor="@color/accent_material_light"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Large Text"
+                android:layout_marginBottom="30dp"
+                android:id="@+id/txtDescription"
+                android:textColor="#2E2E2E"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Color"
+                android:layout_marginEnd="10dp"
+                android:textStyle="bold"
+                android:textColor="#2E2E2E"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Color"
+                android:textSize="14sp"
+                android:layout_marginBottom="30dp"
+                android:textColor="#2E2E2E"
+                android:id="@+id/txtColor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Shipping Fee"
+                android:layout_marginEnd="10dp"
+                android:textStyle="bold"
+                android:textColor="#2E2E2E"
+                android:textSize="14sp"
+                android:id="@+id/textView6" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Shipping Fee"
+                android:textSize="14sp"
+                android:layout_marginEnd="30dp"
+                android:textColor="#2E2E2E"
+                android:id="@+id/txtShippingFee" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="#000000">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Large Text"
+                android:id="@+id/txtDetailPrice"
+                android:textColor="#FE9A2E"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
-                android:id="@+id/button4" />
+                android:text="Buy"
+                android:id="@+id/btnBuy"
+                android:background="@drawable/buy_button"
+                android:layout_marginEnd="10dp"
+                android:textColor="#ffffff"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

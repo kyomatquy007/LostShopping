@@ -30,7 +30,10 @@
             android:name=".CreateAccountActivity"
             android:label="Create Account" />
         <activity android:name=".ViDuAdapterActivity" />
-        <activity android:name=".ProductDetailActivity"></activity>
+        <activity android:name=".ProductDetailActivity"
+            android:label="Details">
+
+        </activity>
     </application>
 
 </manifest>

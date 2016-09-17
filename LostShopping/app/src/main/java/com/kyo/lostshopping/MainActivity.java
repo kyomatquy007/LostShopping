@@ -85,6 +85,10 @@ public class MainActivity extends AppCompatActivity
         intent.putExtra("PRO_ID",pro.getPRO_ID());
         intent.putExtra("PRO_IMAGE",pro.getPRO_IMAGE());
         intent.putExtra("PRO_SALE_UNIT_PRICE",(float)pro.getPRO_SALE_UNIT_PRICE());
+        intent.putExtra("PRO_DES",pro.getPRO_DES());
+        intent.putExtra("PRO_NAME",pro.getPRO_NAME());
+        intent.putExtra("PRO_COLOR",pro.getPRO_COLOR());
+        intent.putExtra("PRO_SUP_UNIT_PRICE",(float)pro.getPRO_SUP_UNIT_PRICE());
         startActivity(intent);
     }
 
